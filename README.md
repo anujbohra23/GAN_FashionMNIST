@@ -27,4 +27,9 @@ It consists of Generators which generate fake images which look like real images
    d. Adds noise for robustness\
    e. Calculates Total Loss
 
-5.
+5. Generator Training
+   Similar steps to traiing the discriminator but the differentiator is that it creates labels for the generated images as all ones, tricking the discriminator into believing they're real (predicted_labels).
+
+6. Saving the model and images
+   a. Saves the model in .h5 file\
+   b. Saves the generated images in images folder
