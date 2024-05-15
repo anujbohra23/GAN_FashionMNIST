@@ -14,6 +14,17 @@ It consists of Generators which generate fake images which look like real images
    It uses sequential model for training\
    a. Dense Layer with ReLU and Reshape to convert 128 random inputs to 7*7*128 shape\
    b. Upsampling blocks to double the size of output layer and then Conv Layer to get parameters\
-   c. Downsampling blocks with Conv and ReLU\
+   c. Downsampling blocks with Conv and ReLU
 
 3. Discriminator Building
+   It has similar steps like generator without upsampling but with dropout to get regularisation and making it difficult for discriminator to learn
+
+4. Discriminator Training
+   Using Adam as the Optimiser and BinaryCrossentropy as the loss \
+   a. Getting real images and generating some fake images with generator\
+   b. Creates GradientTape to track gradients for backpropogation\
+   c. It feeds real and fake images to discriminator and creates labels for real ones as 1 and fake ones as 0\
+   d. Adds noise for robustness\
+   e. Calculates Total Loss
+
+5.
