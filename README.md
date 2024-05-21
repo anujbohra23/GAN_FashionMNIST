@@ -33,3 +33,5 @@ It consists of Generators which generate fake images which look like real images
 6. Saving the model and images
    a. Saves the model in .h5 file\
    b. Saves the generated images in images folder
+
+High GPU power is required to generate the images.
